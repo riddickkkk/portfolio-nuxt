@@ -1,43 +1,74 @@
-<template>
-  <div class="min-h-screen bg-[#1c2419] text-[#fdfbf7] font-sans">
-    <!-- Header / Navbar -->
-    <header class="border-b border-[#3b4a37] px-8 py-6 flex justify-between items-center max-w-6xl mx-auto">
-      <h1 class="text-xl font-bold tracking-wide text-[#a3b18a]">Rean Riddick Guinto</h1>
-      <nav class="space-x-6 text-sm font-medium">
-        <a href="#about" class="hover:text-[#a3b18a] transition-colors">About</a>
-        <a href="#projects" class="hover:text-[#a3b18a] transition-colors">Projects</a>
-        <a href="#contact" class="hover:text-[#a3b18a] transition-colors">Contact</a>
-      </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <main class="max-w-4xl mx-auto px-6 py-20 text-center">
-      <span class="inline-block px-3 py-1 bg-[#2a3826] text-[#a3b18a] rounded-full text-xs font-semibold mb-4 border border-[#3b4a37]">
-        IT Student & Front-End Web Developer
-      </span>
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-[#fdfbf7]">
-        Building Modern & Responsive Web Applications
-      </h2>
-      <p class="text-base md:text-lg text-[#cbd5e1] max-w-2xl mx-auto mb-8">
-        Welcome to my portfolio! Built with Nuxt 4 and deployed on Render as a Web Service.
-      </p>
-      <div class="flex justify-center gap-4">
-        <a href="#projects" class="bg-[#588157] hover:bg-[#3a5a40] text-[#fdfbf7] px-6 py-3 rounded-lg font-semibold transition-all shadow-md">
-          View Projects
-        </a>
-        <a href="https://github.com/riddickkkk" target="_blank" class="border border-[#3b4a37] hover:bg-[#2a3826] text-[#fdfbf7] px-6 py-3 rounded-lg font-semibold transition-all">
-          GitHub Profile
-        </a>
-      </div>
-    </main>
-  </div>
-</template>
-
-<script setup>
+<script setup lang="ts">
+// SEO Composables required by Professor Sylvan Cahilog
 useHead({
   title: 'Rean Riddick Guinto | Portfolio',
   meta: [
-    { name: 'description', content: 'Personal Web Development Portfolio built with Nuxt 4' }
+    { name: 'description', content: 'Portfolio of Rean Riddick Garcia Guinto - Front-End Web Developer.' }
   ]
 })
+
+useSeoMeta({
+  title: 'Rean Riddick Guinto - Portfolio',
+  ogTitle: 'Rean Riddick Guinto - Portfolio',
+  description: 'IT Student & Front-End Web Developer',
+  ogDescription: 'IT Student & Front-End Web Developer'
+})
 </script>
+
+<template>
+  <div class="min-h-screen bg-gradient-to-b from-[#182615] via-[#1f331b] to-[#142111] text-[#fdfbf7] font-sans flex flex-col justify-between">
+    <!-- Navbar Header Component -->
+    <AppHeader />
+
+    <!-- Hero Section (Centered) -->
+    <main class="flex-1 flex flex-col items-center justify-center text-center px-4 py-12">
+      <!-- Circular Glowing Profile Image -->
+      <div class="relative mb-6">
+        <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-[#527346] shadow-[0_0_30px_rgba(163,177,138,0.3)] bg-[#2a3a24] mx-auto flex items-center justify-center">
+          <!-- Uses your picture from public/rean.png -->
+          <img 
+            src="/rean.png" 
+            alt="Rean Riddick Guinto" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      <!-- Full Name -->
+      <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-[#fdfbf7] mb-2">
+        Rean Riddick Guinto
+      </h1>
+
+      <!-- Role / Subtitle -->
+      <p class="text-xs md:text-sm font-semibold tracking-widest text-[#a3b18a] uppercase mb-6">
+        FRONT-END WEB DEVELOPER & IT STUDENT
+      </p>
+
+      <!-- Center Rounded Card / Bio -->
+      <div class="max-w-xl w-full bg-[#1b2b18]/80 backdrop-blur-md border border-[#3f5a36]/50 rounded-2xl p-6 mb-8 shadow-lg">
+        <p class="text-sm md:text-base text-[#dad7cd] leading-relaxed">
+          Building responsive, modern web applications and dedicated to creating clean, user-focused digital experiences.
+        </p>
+      </div>
+
+      <!-- Lower Action Pills -->
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="#about" class="px-6 py-2.5 bg-[#4f6f43] hover:bg-[#5e8350] text-[#fdfbf7] rounded-full text-xs font-bold tracking-wider uppercase transition-all shadow-md">
+          ABOUT ME
+        </a>
+        <a href="#certificates" class="px-6 py-2.5 bg-[#4f6f43] hover:bg-[#5e8350] text-[#fdfbf7] rounded-full text-xs font-bold tracking-wider uppercase transition-all shadow-md">
+          CERTIFICATES
+        </a>
+        <a href="#techstack" class="px-6 py-2.5 bg-[#4f6f43] hover:bg-[#5e8350] text-[#fdfbf7] rounded-full text-xs font-bold tracking-wider uppercase transition-all shadow-md">
+          TECH STACK
+        </a>
+        <a href="#contacts" class="px-6 py-2.5 bg-[#4f6f43] hover:bg-[#5e8350] text-[#fdfbf7] rounded-full text-xs font-bold tracking-wider uppercase transition-all shadow-md">
+          CONTACTS
+        </a>
+      </div>
+    </main>
+
+    <!-- Empty footer space to maintain vertical balance -->
+    <footer class="py-6"></footer>
+  </div>
+</template>
