@@ -5,15 +5,14 @@ module.exports = {
     './layouts/**/*.vue',
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
-    './app/**/*.{js,vue,ts}', 
+    './app/**/*.{js,vue,ts}',
     './app.vue',
     './error.vue',
   ],
   theme: {
     extend: {},
   },
-  plugins: [require('daisyui')],
-  daisyui: {
-    themes: ['emerald', 'dark', 'synthwave'],
-  },
+  plugins: [
+    require('daisyui')
+  ],
 }
