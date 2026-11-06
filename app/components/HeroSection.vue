@@ -3,15 +3,15 @@ import { User, Award, Wrench, Mail } from 'lucide-vue-next'
 </script>
 
 <template>
-  <section id="home" class="min-h-screen flex items-center justify-center pt-24 pb-16 px-4 bg-[#182615]">
+  <section class="min-h-screen flex items-center justify-center pt-24 pb-16 px-4 bg-[#182615]">
     <div class="max-w-3xl mx-auto text-center flex flex-col items-center">
       <!-- Profile Image -->
       <div class="relative mb-6">
         <div class="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-[#5e8350] shadow-2xl bg-[#253821]">
           <img 
-           src="/pictures/Guinto, Rean Riddick G. (1).png" 
-           alt="Rean Riddick Guinto" 
-           class="w-full h-full object-cover"
+            src="/pictures/Guinto, Rean Riddick G. (1).png" 
+            alt="Rean Riddick Guinto" 
+            class="w-full h-full object-cover"
           />
         </div>
       </div>
@@ -32,32 +32,32 @@ import { User, Award, Wrench, Mail } from 'lucide-vue-next'
         </p>
       </div>
 
-      <!-- Original Section Pill Buttons -->
+      <!-- Section Navigation Buttons -->
       <div class="flex flex-wrap items-center justify-center gap-3">
-        <a 
-          href="#about" 
+        <NuxtLink 
+          to="/about" 
           class="btn bg-[#4f6f43] hover:bg-[#5e8350] text-[#fdfbf7] border-none rounded-full px-5 text-xs tracking-wider transition-all shadow-md flex items-center gap-2"
         >
           <User class="w-4 h-4" /> ABOUT ME
-        </a>
-        <a 
-          href="#certificates" 
+        </NuxtLink>
+        <NuxtLink 
+          to="/certificates" 
           class="btn bg-[#4f6f43] hover:bg-[#5e8350] text-[#fdfbf7] border-none rounded-full px-5 text-xs tracking-wider transition-all shadow-md flex items-center gap-2"
         >
           <Award class="w-4 h-4" /> CERTIFICATES
-        </a>
-        <a 
-          href="#techstack" 
+        </NuxtLink>
+        <NuxtLink 
+          to="/tech-stack" 
           class="btn bg-[#4f6f43] hover:bg-[#5e8350] text-[#fdfbf7] border-none rounded-full px-5 text-xs tracking-wider transition-all shadow-md flex items-center gap-2"
         >
           <Wrench class="w-4 h-4" /> TECH STACK
-        </a>
-        <a 
-          href="#contacts" 
+        </NuxtLink>
+        <NuxtLink 
+          to="/contacts" 
           class="btn bg-[#4f6f43] hover:bg-[#5e8350] text-[#fdfbf7] border-none rounded-full px-5 text-xs tracking-wider transition-all shadow-md flex items-center gap-2"
         >
           <Mail class="w-4 h-4" /> CONTACTS
-        </a>
+        </NuxtLink>
       </div>
     </div>
   </section>
