@@ -2,15 +2,15 @@
 useHead({
   title: 'Rean Riddick Guinto | Portfolio',
   meta: [
-    { name: 'description', content: 'Portfolio of Rean Riddick Garcia Guinto - Front-End Web Developer.' }
+    { name: 'description', content: 'Portfolio of Rean Riddick Garcia Guinto.' }
   ]
 })
 
 useSeoMeta({
   title: 'Rean Riddick Guinto - Portfolio',
   ogTitle: 'Rean Riddick Guinto - Portfolio',
-  description: 'IT Student & Front-End Web Developer',
-  ogDescription: 'IT Student & Front-End Web Developer'
+  description: 'IT Student',
+  ogDescription: 'IT Student'
 })
 </script>
 
