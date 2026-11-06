@@ -9,9 +9,9 @@ import { User, Award, Wrench, Mail } from 'lucide-vue-next'
       <div class="relative mb-6">
         <div class="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-[#5e8350] shadow-2xl bg-[#253821]">
           <img 
-            src="/pictures/myphoto.jpg" 
-            alt="Rean Riddick Guinto" 
-            class="w-full h-full object-cover"
+           src="/pictures/Guinto, Rean Riddick G. (1).png" 
+           alt="Rean Riddick Guinto" 
+           class="w-full h-full object-cover"
           />
         </div>
       </div>

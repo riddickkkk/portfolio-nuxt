@@ -16,12 +16,6 @@ useHead({
     <AppHeader />
 
     <main>
-      <!-- Hero / Landing Section -->
-      <HeroSection />
-
-      <!-- About Me Section -->
-      <AboutSection />
-
       <!-- Certificates Section -->
       <CertificatesSection />
 
