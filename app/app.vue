@@ -2,28 +2,43 @@
 useHead({
   title: 'Rean Riddick Guinto | Portfolio',
   meta: [
-    { name: 'description', content: 'Portfolio of Rean Riddick Garcia Guinto.' }
+    { name: 'description', content: 'Personal portfolio of Rean Riddick Garcia Guinto built with Nuxt 4, Tailwind CSS, and DaisyUI.' }
+  ],
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
   ]
-})
-
-useSeoMeta({
-  title: 'Rean Riddick Guinto - Portfolio',
-  ogTitle: 'Rean Riddick Guinto - Portfolio',
-  description: 'IT Student',
-  ogDescription: 'IT Student'
 })
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-b from-[#182615] via-[#1f331b] to-[#142111] text-[#fdfbf7] font-sans flex flex-col justify-between">
+  <div class="min-h-screen bg-[#182615] text-[#fdfbf7] font-sans antialiased selection:bg-[#4f6f43] selection:text-[#fdfbf7]">
+    <!-- Sticky Navigation Bar -->
     <AppHeader />
+
     <main>
+      <!-- Hero / Landing Section -->
       <HeroSection />
-      <AboutSection id="about" />
-      <CertificatesSection id="certificates" />
-      <TechStackSection id="techstack" />
-      <ContactSection id="contacts" />
+
+      <!-- About Me Section -->
+      <AboutSection />
+
+      <!-- Certificates Section -->
+      <CertificatesSection />
+
+      <!-- Tech Stack Section -->
+      <TechStackSection />
+
+      <!-- Contact Section -->
+      <ContactSection />
     </main>
+
+    <!-- Footer -->
     <FooterSection />
   </div>
 </template>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
