@@ -1,6 +1,20 @@
 <script setup lang="ts">
 import { Wrench } from 'lucide-vue-next'
 
+// 1. Page-level SEO setup
+useHead({
+  title: 'Tech Stack | Rean Riddick Garcia Guinto'
+})
+
+useSeoMeta({
+  title: 'Tech Stack | Rean Riddick Garcia Guinto',
+  ogTitle: 'Tech Stack | Rean Riddick Garcia Guinto',
+  description: 'Programming languages, databases, and development tools used by Rean Riddick Garcia Guinto, including Java, C, JavaScript, HTML, CSS, MySQL, Git, and Android Studio.',
+  ogDescription: 'Programming languages, databases, and development tools used by Rean Riddick Garcia Guinto, including Java, C, JavaScript, HTML, CSS, MySQL, Git, and Android Studio.',
+  twitterCard: 'summary_large_image'
+})
+
+// 2. Tech stack items
 const techItems = [
   { name: 'C', icon: '/pictures/cproglogo.png' },
   { name: 'Java', icon: '/pictures/javalogo.png' },
@@ -16,8 +30,8 @@ const techItems = [
 </script>
 
 <template>
-  <section id="techstack" class="py-16 px-4">
-    <div class="max-w-4xl mx-auto">
+  <section id="techstack" class="py-24 px-4 min-h-screen">
+    <div class="max-w-4xl mx-auto pt-6">
       <!-- Section Title & Subtitle -->
       <div class="flex flex-col items-center justify-center mb-10 text-center">
         <div class="flex items-center gap-2 mb-2">
@@ -29,23 +43,25 @@ const techItems = [
         </p>
       </div>
 
-      <!-- Tech Grid -->
+      <!-- Tech Grid (DaisyUI Cards) -->
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
         <div 
           v-for="(tech, index) in techItems" 
           :key="index"
-          class="flex flex-col items-center justify-center p-5 bg-[#1b2b18]/80 border border-[#3f5a36]/50 rounded-2xl shadow-lg hover:border-[#5e8350] hover:bg-[#1b2b18] transition-all group"
+          class="card bg-[#1b2b18]/80 border border-[#3f5a36]/50 rounded-2xl shadow-lg hover:border-[#5e8350] hover:bg-[#1b2b18] transition-all group"
         >
-          <div class="w-12 h-12 flex items-center justify-center mb-3">
-            <img 
-              :src="tech.icon" 
-              :alt="tech.name" 
-              class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform"
-            />
+          <div class="card-body p-5 flex flex-col items-center justify-center">
+            <div class="w-12 h-12 flex items-center justify-center mb-2">
+              <img 
+                :src="tech.icon" 
+                :alt="tech.name" 
+                class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform"
+              />
+            </div>
+            <span class="text-xs font-semibold text-[#fdfbf7] tracking-wide text-center">
+              {{ tech.name }}
+            </span>
           </div>
-          <span class="text-xs font-semibold text-[#fdfbf7] tracking-wide text-center">
-            {{ tech.name }}
-          </span>
         </div>
       </div>
     </div>

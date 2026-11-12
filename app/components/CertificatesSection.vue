@@ -2,6 +2,19 @@
 import { ref } from 'vue'
 import { Award, ExternalLink, X } from 'lucide-vue-next'
 
+// Page-level SEO setup
+useHead({
+  title: 'Certificates | Rean Riddick Garcia Guinto'
+})
+
+useSeoMeta({
+  title: 'Certificates | Rean Riddick Garcia Guinto',
+  ogTitle: 'Certificates | Rean Riddick Garcia Guinto',
+  description: 'Verified IT Java Specialist and Microsoft PowerPoint Specialist certifications earned by Rean Riddick Garcia Guinto.',
+  ogDescription: 'Verified IT Java Specialist and Microsoft PowerPoint Specialist certifications earned by Rean Riddick Garcia Guinto.',
+  twitterCard: 'summary_large_image'
+})
+
 const certificates = [
   {
     title: 'IT Java Specialist',
@@ -28,8 +41,8 @@ const closeLightbox = () => {
 </script>
 
 <template>
-  <section id="certificates" class="py-16 px-4 bg-[#142111]/40">
-    <div class="max-w-5xl mx-auto">
+  <section id="certificates" class="py-24 px-4 bg-[#142111]/40 min-h-screen">
+    <div class="max-w-5xl mx-auto pt-6">
       <!-- Section Title -->
       <div class="flex items-center justify-center gap-2 mb-8">
         <Award class="w-6 h-6 text-[#a3b18a]" />
