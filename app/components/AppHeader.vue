@@ -1,10 +1,12 @@
 <script setup lang="ts">
+import { Home, User, Award, Wrench, Mail } from 'lucide-vue-next'
+
 const navLinks = [
-  { label: 'HOME', to: '/' },
-  { label: 'ABOUT ME', to: '/about' },
-  { label: 'CERTIFICATES', to: '/certificates' },
-  { label: 'TECH STACK', to: '/tech-stack' },
-  { label: 'CONTACTS', to: '/contacts' }
+  { label: 'HOME', to: '/', icon: Home },
+  { label: 'ABOUT ME', to: '/about', icon: User },
+  { label: 'CERTIFICATES', to: '/certificates', icon: Award },
+  { label: 'TECH STACK', to: '/tech-stack', icon: Wrench },
+  { label: 'CONTACTS', to: '/contacts', icon: Mail }
 ]
 </script>
 
@@ -23,9 +25,10 @@ const navLinks = [
           <li v-for="link in navLinks" :key="link.to">
             <NuxtLink 
               :to="link.to" 
-              class="text-xs text-[#dad7cd] hover:text-[#fdfbf7] hover:bg-[#253821] rounded-lg"
+              class="text-xs text-[#dad7cd] hover:text-[#fdfbf7] hover:bg-[#253821] rounded-lg flex items-center gap-2"
               active-class="bg-[#4f6f43] text-[#fdfbf7]"
             >
+              <component :is="link.icon" class="w-4 h-4" />
               {{ link.label }}
             </NuxtLink>
           </li>
@@ -38,15 +41,16 @@ const navLinks = [
       </NuxtLink>
     </div>
 
-    <!-- Navbar End: Desktop Links -->
+    <!-- Navbar End: Desktop Links with Icons -->
     <nav class="navbar-end hidden md:flex">
       <ul class="menu menu-horizontal px-1 gap-2">
         <li v-for="link in navLinks" :key="link.to">
           <NuxtLink 
             :to="link.to" 
-            class="btn btn-ghost btn-sm text-xs text-[#dad7cd] hover:text-[#fdfbf7] hover:bg-[#253821] rounded-full"
+            class="btn btn-ghost btn-sm text-xs text-[#dad7cd] hover:text-[#fdfbf7] hover:bg-[#253821] rounded-full flex items-center gap-1.5"
             active-class="bg-[#4f6f43] text-[#fdfbf7]"
           >
+            <component :is="link.icon" class="w-3.5 h-3.5" />
             {{ link.label }}
           </NuxtLink>
         </li>
