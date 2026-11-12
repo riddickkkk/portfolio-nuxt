@@ -1,5 +1,17 @@
 <script setup lang="ts">
 import { User, Heart, Compass } from 'lucide-vue-next'
+
+useHead({
+  title: 'About Me | Rean Riddick Garcia Guinto'
+})
+
+useSeoMeta({
+  description: 'Learn more about Rean Riddick Garcia Guinto—an active, sporty fitness enthusiast and IT student driven by curiosity, discipline, and meaningful experiences.',
+  ogTitle: 'About Me | Rean Riddick Garcia Guinto',
+  ogDescription: 'Learn more about Rean Riddick Garcia Guinto—an active, sporty fitness enthusiast and IT student driven by curiosity, discipline, and meaningful experiences.',
+  ogType: 'website',
+  twitterCard: 'summary_large_image'
+})
 </script>
 
 <template>
@@ -11,9 +23,7 @@ import { User, Heart, Compass } from 'lucide-vue-next'
         <h2 class="text-3xl font-bold text-center text-[#fdfbf7]">About Me</h2>
       </div>
 
-      
       <div class="space-y-6">
-        
         <div class="card bg-[#1b2b18]/80 backdrop-blur-md border border-[#3f5a36]/50 shadow-xl p-6 md:p-8 rounded-2xl text-[#dad7cd]">
           <div class="flex items-start gap-4">
             <div class="p-3 bg-[#4f6f43]/30 border border-[#5e8350]/40 rounded-xl text-[#a3b18a] shrink-0">
@@ -26,6 +36,7 @@ import { User, Heart, Compass } from 'lucide-vue-next'
             </div>
           </div>
         </div> 
+
         <div class="card bg-[#1b2b18]/80 backdrop-blur-md border border-[#3f5a36]/50 shadow-xl p-6 md:p-8 rounded-2xl text-[#dad7cd]">
           <div class="flex items-start gap-4">
             <div class="p-3 bg-[#4f6f43]/30 border border-[#5e8350]/40 rounded-xl text-[#a3b18a] shrink-0">
